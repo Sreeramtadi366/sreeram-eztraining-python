@@ -1,0 +1,11 @@
+EXCEPTION HANDLING:
+When there is exception the developer does not want interruption or disturbance in the program flow to achive this we are using exception handling
+
+*WHY EXCEPTION HANDLING...?
+Even if there is error exection should not stop
+normal statement/critical statement
+
+*3 types
+~compile time error....syntax error
+~logical....wrong output
+~run time....wrong input by user
