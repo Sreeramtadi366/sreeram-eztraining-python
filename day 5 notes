@@ -1,0 +1,266 @@
+###RANDOM MODULES###
+-----> Everytimes it gives different output
+
+1. random.sample()
+>>>import random as r
+>>>x="hello good day"----->string is accepted
+>>>print(r.sample(x,2))
+['d', 'g']
+>>>print(r.sample(x,2))
+['o', 'h']
+
+>>>a=[1,4,2.4,'a']----------> list is accepted
+>>>print(r.sample(a,3))
+[2.4, 'a', 1]
+>>>print(r.sample(a,3))
+[2.4, 1, 'a']
+
+>>>a=(1,3,4.5,'a')---------->tuple is accepted                   
+>>>print(r.sample(a,2))                    
+['a', 4.5]
+
+>>>a={1,2,3,4}---------->set is not accepted(bcoz set always returns the output as ascending order)
+>>>print(r.sample(a,2))
+TypeError: Population must be a sequence.  For dicts or sets, use sorted(d).
+
+2. random.shuffle()
+>>>import random as r
+>>>a=[1,2,3,4]-------------->list only accepted
+>>>print(r.shuffle(a))
+None
+>>>r.shuffle(a)
+>>>a
+[4, 3, 2, 1]
+>>>r.shuffle(a)
+>>>a
+[3, 2, 1, 4]
+
+>>>a={1,2,3,4}---------------> set is not accepted
+>>>r.shuffle(a)
+TypeError: 'set' object is not subscriptable
+
+>>>a=(1,2,3,4)---------------->tuple is not accepted
+>>>r.shuffle(a)
+TypeError: 'tuple' object does not support item assignment
+
+>>>s="hello world"-------------->string is not accepted
+>>>r.shuffle(s)
+TypeError: 'str' object does not support item assignment
+
+3. random.choice() ###gives the random number from the list
+>>>a=[1,2,3,3,4]------------->list is  accepted                  
+>>>r.choice(a)                   
+3
+
+>>>c=(1,2,3,4)-------------->tuple is accepted
+>>>r.choice(c)
+2
+
+>>>b={1,2,3,4}------------------->set is not accepted                    
+>>>r.choice(b)
+TypeError: 'set' object is not subscriptable
+
+>>>s=" hello world"------------->string is accepted
+>>>r.choice(s)
+'d'
+
+4. random.random() ##gives the 1 random number without input btw 0.0 to 1.0
+>>>a=r.random()
+>>>a
+0.7546336787297786
+
+5. r.randint(from,to), r.randrange(from,to)  ###gives 1 int random number in range
+>>>r.randint(10,20)
+17
+>>>r.randrange(10,20)
+18
+
+6. r.choices()
+>>>a=[1,2,3,4]----------->list is accepted
+>>>r.choices(a,k=10)
+[2, 2, 3, 3, 4, 4, 2, 3, 4, 2]
+
+>>>r.choices(a,h=10)
+TypeError: Random.choices() got an unexpected keyword argument 'h'
+
+>>>b=(1,2,3,4)----------------->tuple is accepted
+>>>r.choices(b,k=10)
+[4, 3, 1, 4, 1, 2, 3, 2, 3, 1]
+
+>>>c={1,2,34,4}------------------->set is not accepted
+>>>r.choices(c,k=10)
+TypeError: 'set' object is not subscriptable
+
+>>>s="hello world"----------------string is accepted
+>>>r.choices(s,k=10)
+['d', 'h', 'l', 'l', 'l', 'o', 'o', 'l', 'o', 'w']
+
+7. random.uniform()  #### ###gives 1 float random number in range
+>>>r.uniform(5,10)
+9.067217148670506
+
+>>>r.uniform(5,10)
+6.305785990020409
+
+---------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------
+####CALENDAR###
+>>>import calendar as c
+>>>print(c.calendar(2023))
+                                  2023
+
+      January                   February                   March
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+                   1             1  2  3  4  5             1  2  3  4  5
+ 2  3  4  5  6  7  8       6  7  8  9 10 11 12       6  7  8  9 10 11 12
+ 9 10 11 12 13 14 15      13 14 15 16 17 18 19      13 14 15 16 17 18 19
+16 17 18 19 20 21 22      20 21 22 23 24 25 26      20 21 22 23 24 25 26
+23 24 25 26 27 28 29      27 28                     27 28 29 30 31
+30 31
+
+       April                      May                       June
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+                1  2       1  2  3  4  5  6  7                1  2  3  4
+ 3  4  5  6  7  8  9       8  9 10 11 12 13 14       5  6  7  8  9 10 11
+10 11 12 13 14 15 16      15 16 17 18 19 20 21      12 13 14 15 16 17 18
+17 18 19 20 21 22 23      22 23 24 25 26 27 28      19 20 21 22 23 24 25
+24 25 26 27 28 29 30      29 30 31                  26 27 28 29 30
+
+        July                     August                  September
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+                1  2          1  2  3  4  5  6                   1  2  3
+ 3  4  5  6  7  8  9       7  8  9 10 11 12 13       4  5  6  7  8  9 10
+10 11 12 13 14 15 16      14 15 16 17 18 19 20      11 12 13 14 15 16 17
+17 18 19 20 21 22 23      21 22 23 24 25 26 27      18 19 20 21 22 23 24
+24 25 26 27 28 29 30      28 29 30 31               25 26 27 28 29 30
+31
+
+      October                   November                  December
+Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su      Mo Tu We Th Fr Sa Su
+                   1             1  2  3  4  5                   1  2  3
+ 2  3  4  5  6  7  8       6  7  8  9 10 11 12       4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15      13 14 15 16 17 18 19      11 12 13 14 15 16 17
+16 17 18 19 20 21 22      20 21 22 23 24 25 26      18 19 20 21 22 23 24
+23 24 25 26 27 28 29      27 28 29 30               25 26 27 28 29 30 31
+30 31
+
+>>>print(c.month(2023,10))
+    October 2023
+Mo Tu We Th Fr Sa Su
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31
+
+>>>print(c.month(2013,10))
+    October 2013
+Mo Tu We Th Fr Sa Su
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+
+>>>print(c.setfirstweekday(c.WEDNESDAY)) ###only capital(days) is accepted
+None
+>>>print(c.calendar(2023))
+                                  2023
+
+      January                   February                   March
+We Th Fr Sa Su Mo Tu      We Th Fr Sa Su Mo Tu      We Th Fr Sa Su Mo Tu
+             1  2  3       1  2  3  4  5  6  7       1  2  3  4  5  6  7
+ 4  5  6  7  8  9 10       8  9 10 11 12 13 14       8  9 10 11 12 13 14
+11 12 13 14 15 16 17      15 16 17 18 19 20 21      15 16 17 18 19 20 21
+18 19 20 21 22 23 24      22 23 24 25 26 27 28      22 23 24 25 26 27 28
+25 26 27 28 29 30 31                                29 30 31
+
+       April                      May                       June
+We Th Fr Sa Su Mo Tu      We Th Fr Sa Su Mo Tu      We Th Fr Sa Su Mo Tu
+          1  2  3  4                      1  2          1  2  3  4  5  6
+ 5  6  7  8  9 10 11       3  4  5  6  7  8  9       7  8  9 10 11 12 13
+12 13 14 15 16 17 18      10 11 12 13 14 15 16      14 15 16 17 18 19 20
+19 20 21 22 23 24 25      17 18 19 20 21 22 23      21 22 23 24 25 26 27
+26 27 28 29 30            24 25 26 27 28 29 30      28 29 30
+                          31
+
+        July                     August                  September
+We Th Fr Sa Su Mo Tu      We Th Fr Sa Su Mo Tu      We Th Fr Sa Su Mo Tu
+          1  2  3  4                         1             1  2  3  4  5
+ 5  6  7  8  9 10 11       2  3  4  5  6  7  8       6  7  8  9 10 11 12
+12 13 14 15 16 17 18       9 10 11 12 13 14 15      13 14 15 16 17 18 19
+19 20 21 22 23 24 25      16 17 18 19 20 21 22      20 21 22 23 24 25 26
+26 27 28 29 30 31         23 24 25 26 27 28 29      27 28 29 30
+                          30 31
+
+      October                   November                  December
+We Th Fr Sa Su Mo Tu      We Th Fr Sa Su Mo Tu      We Th Fr Sa Su Mo Tu
+             1  2  3       1  2  3  4  5  6  7             1  2  3  4  5
+ 4  5  6  7  8  9 10       8  9 10 11 12 13 14       6  7  8  9 10 11 12
+11 12 13 14 15 16 17      15 16 17 18 19 20 21      13 14 15 16 17 18 19
+18 19 20 21 22 23 24      22 23 24 25 26 27 28      20 21 22 23 24 25 26
+25 26 27 28 29 30 31      29 30                     27 28 29 30 31
+-------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+####DISPLAY DATE MONTH#####
+
+IMPORT DATETIME
+
+>>>variable=datetime.datetime.now() //gives current date and time with milliseconds
+>>>var=datetime.datetime.now()
+>>>var
+datetime.datetime(2023, 2, 3, 21, 21, 18, 410520)
+
+variable=variable.strftime("%y") #prints the year like '23'
+variable=variable.strftime("%Y") #prints the year like '2023'
+
+>>>year=var.strftime("%Y")
+>>>year
+'2023'
+
+>>>y=var.strftime("%y")
+>>>y
+'23'
+
+>>>mon=var.strftime("%m")----->returns month
+>>>mon
+'02'
+
+>>>date=var.strftime("%d")---------->returns date
+>>>date
+'03'
+
+>>>m=var.strftime("%M")---------->returns minutes
+>>>m
+'25'
+
+>>>time=var.strftime("%H:%M:%S")-------->returns time
+>>>time
+'21:25:35'
+
+>>>date_time=var.strftime("%d/%m/%y , %H:%M:%S")-----> returns both date and time
+>>>date_time
+'03/02/23 , 21:25:35'
+
+--------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+####FUNCTIONS####
+CLASSIFICATION
+1.predefined function
+2. user-defined function
+for code reusability , we use functions
+lets say we want to use particular concept multiple programs in our prog instead of writing the same code multiple times we can write it once include that inside a function
+and call the function wherever we needed
+
+TYPES:--
+1. function without argument without return value
+2. without argument with return value
+3. with argument with return value
+4. with argument without return value
+
+KEY WORD:--def
+------------------------------------------------------------------------------------------------------------------------------------
+###RECURSIVE FUNCTION###
+A function which calls itself is called recursive function
+This concept is called recursion
