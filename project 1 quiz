@@ -1,0 +1,114 @@
+q1="""whos ur favourite person?
+a.prabhas
+b.Satish
+C.Charan
+D.Naveen"""
+
+q2="""whos ur favourite cricket player?
+a.Virat
+b.Dhoni
+c.sachin
+d.Gill"""
+
+q3="""whos ur favourite teacher?
+a.Siva sir
+b.kiran sir
+c.Devi sir
+D.Ashusir"""
+
+q4="""whats ur hobby?
+a.Playing
+b.Eating
+C.Sleeping
+d.watching tv"""
+
+q5="""whos ur favourite author?
+a.robin sharma
+b.sanjay
+c.arhan kumari
+d.harrypotter"""
+
+questions={q1:"b",q2:"a",q3:"a",q4:"c",q5:"a"}
+
+name = input("Hi whats ur name")
+print("Hello",name,"Welcome to the Quiz")
+score=0
+for i in questions:
+    print()
+    print(i)
+    flag1=input("Do you want to skip this question (yes/no)")
+    if flag1=="yess":
+        continue
+    ans=input("enter your answer")
+    if ans==questions[i]:
+        print("Wow!you got one point")
+        score=score+1
+        print("your current score is :",score)
+    else:
+        print("wrong answer,u lost 1 mark")
+        score=score-1
+        print("ur current score is",score)
+    flag2=input("Do you want to Quit? type(yes/no)")
+    if flag2=="yes":
+        break
+print("Your total score is",score)
+
+OUTPUT:
+Hi whats ur name prabhas
+Hello  prabhas Welcome to the Quiz
+
+whos ur favourite person?
+a.prabhas
+b.Satish
+C.Charan
+D.Naveen
+Do you want to skip this question (yes/no)no
+enter your answer b
+wrong answer,u lost 1 mark
+ur current score is -1
+Do you want to Quit? type(yes/no)no
+
+whos ur favourite cricket player?
+a.Virat
+b.Dhoni
+c.sachin
+d.Gill
+Do you want to skip this question (yes/no)no
+enter your answerA
+Wow!you got one point
+your current score is : 0
+Do you want to Quit? type(yes/no)no
+
+whos ur favourite teacher?
+a.Siva sir
+b.kiran sir
+c.Devi sir
+D.Ashusir
+Do you want to skip this question (yes/no)no
+enter your answera
+Wow!you got one point
+your current score is : 1
+Do you want to Quit? type(yes/no)no
+
+whats ur hobby?
+a.Playing
+b.Eating
+C.Sleeping
+d.watching tv
+Do you want to skip this question (yes/no)no
+enter your answerc
+Wow!you got one point
+your current score is : 2
+Do you want to Quit? type(yes/no)no
+
+whos ur favourite author?
+a.robin sharma
+b.sanjay
+c.arhan kumari
+d.harrypotter
+Do you want to skip this question (yes/no)no
+enter your answera
+Wow!you got one point
+your current score is : 3
+Do you want to Quit? type(yes/no)yes
+Your total score is 3
