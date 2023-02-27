@@ -1,0 +1,11 @@
+MUTABLE VS IMMUTABLE:
+*MUTABLE can be changed after creation
+~list
+~set
+~dictionary
+*IMMUTABLE cant be changed after creation
+~int
+~float
+~string
+~bool
+~tuple
