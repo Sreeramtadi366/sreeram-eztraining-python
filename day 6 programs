@@ -1,0 +1,123 @@
+PROGRAM-1
+a=100
+b=0
+try:#u r telling this may hv error,u try
+    print(a/b)
+    #except Exception:#u saying if error the 1 handle
+    #print("cant divide any number by zero")
+except Exception as e:
+    print("Please note,number cant be divided by zero",)#this will peint error also
+    #to check your prg execution goes till end or get
+    print("bye")
+
+OUTPUT:
+Please note,number cant be divided by zero
+bye.
+
+
+PROGRAM-2
+EXCEPTION PROGRAM BY USING FINALLY:
+a=10
+b=0
+try:
+    print("resource open")
+    print(a/b)
+except Exception as e:
+    print("Dont give second number as zero",e)
+finally:   #will get executed if there is error
+    print("resource closed")
+
+OUTPUT:
+resource open
+Dont give second number as zero division by zero
+resource closed
+
+PROGRAM-3
+FUNCTION WHICH CALLS ITSELF A RECURSIVE FUNCTION
+a=10
+b=0
+try:
+    print("resource open")
+    print(a/b)
+except Exception as e:
+    print("Dont give second number as zero",e)
+finally:   #will get executed if there is error
+    print("resource closed")
+
+OUTPUT:
+Enter the number23
+resource open
+0.43478260869565216
+Resource closed
+
+PROGRAM-3
+RAISE USED TO INTERRUPT NORMAL FLOW AND RAISE:
+x=10
+if x%2!=0:
+    raise Exception("x should be even number")
+else:
+    print("x is even number..correct")
+
+OUTPUT:
+x is even number...correct
+
+PROGRAM-4
+OOPS BASED PROGRAM:
+class computer:
+    def config(self):
+        print("YEs")
+lenova=computer()
+lenova.config()
+dell=computer()
+dell.config()
+
+OUTPUT:
+YEs
+YEs
+
+PROGRAM-5
+USING CONSTRUCTORS:
+class Employee:
+    def __init__(self, name, id):
+        self.id=id
+        self.name=name
+    def display(self):
+        print("ID: %d \nName: %s" % (self.id,self.name))
+        print(self.id,self.name)
+emp1=Employee("John",101)
+emp2=Employee("David",102)
+emp1.display()
+emp2.display()
+
+OUTPUT:
+ID: 101 
+Name: John
+101 John
+ID: 102 
+Name: David
+102 David
+
+PROGRAM-6
+VARIABLES AND VARIABLE ACCESS IN CLASS AND METHOD:
+class computer():
+    a=20
+    b=20
+    print("Class variable inside class",a)
+    def config(self):
+        c=100
+        print("YEs")
+        print("Instance access",self.b)
+lenova=computer()
+print(lenova.a)
+print(lenova.a+lenova.b)
+dell=computer
+print("dell",dell.a)
+lenova.config()
+
+OUTPUT:
+Class variable inside class 20
+20
+40
+dell 20
+YEs
+Instance access 20
