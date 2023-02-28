@@ -59,7 +59,7 @@ if n in chr:
 else:
     print("no")
 
-OUTPUT:
+
 Enter a string:hello
 enter a character:1
 no
