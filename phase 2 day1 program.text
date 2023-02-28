@@ -1,0 +1,25 @@
+lambda function::
+
+#Anonoymos function
+l=[1,2,3]
+r=map(lambda x:x+x,l)
+print(list(r))
+
+res=map(lambda n:pow(n,2),l)
+print(list(res))
+
+name="Aish"
+(lambda name:print(name))(name)
+
+example2:
+
+l=[2,4,6,8,10,12,14]
+r=map(lambda n:n**0.5,l)
+print(list(r))
+
+using math function:
+
+import math
+l=[2,4,6,8,10,12,14]
+r=map(lambda n:math.sqrt(n),l)
+print(list(r))
