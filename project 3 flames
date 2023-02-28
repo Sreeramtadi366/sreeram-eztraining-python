@@ -27,7 +27,7 @@ if count>0:
 else:
                 print("Enter diffrent names")
 
-OUTPUT:
+
 Enter the name1:prabhas
 Enter the name2:abhishek
 prabhas
