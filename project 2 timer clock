@@ -10,7 +10,7 @@ def countdown(t):
 t =input("Enter the time in seconds:")
 countdown(int(t))
 
-OUTPUT:
+
 Enter the time in seconds:120
 02:00
 01:59
