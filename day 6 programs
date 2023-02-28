@@ -27,7 +27,6 @@ except Exception as e:
 finally:   #will get executed if there is error
     print("resource closed")
 
-OUTPUT:
 resource open
 Dont give second number as zero division by zero
 resource closed
