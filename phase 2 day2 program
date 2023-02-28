@@ -1,0 +1,328 @@
+##HAPPY NUMBERS:
+
+#4,16,37,58,89,145
+def happy(n):
+    s=r=0
+    while(n>=0):
+        for i in range(0,len(str(n))+1):
+            r=n%10
+            s=s+r**2
+            n=n//10
+        return s
+n=int(input("enter a number:"))
+res=n
+while(res!=1 and res!=4):
+    res=happy(res)
+if res==1:
+    print("happy number")
+else:
+    print("not a happy number")
+------------------------------------------------------------------------------------
+#ENCAPSULATION:
+
+#protected_
+class encap:
+    _a=10
+    c=20
+    def encapfunction(self):
+        _b=200
+        print("encap function-accessing protected")
+        print(self._a+10)
+obj=encap()
+print(obj._a)
+obj.encapfunction()
+print(obj.c)
+
+
+#private__
+class encap:
+    __a=10
+    print(__a)
+    def encapfunction(self):
+        print("encap function")
+        print(self.__a)
+obj=encap()
+obj.encapfuntion()
+print(obj.__a)
+---------------------------------------------------------------------------------
+POLYMORPHISM:
+
+#method overloading
+
+class moverloading:
+    def display(delf,a=None,b=None):
+        print(a,b)
+obj=moverloading()
+print("without argument")
+obj.display()
+
+print("with argument")
+obj.display(7,24)
+
+print("with single argument")
+obj.display(7)
+---------------------------------------------------------------------------------
+OVERRIDING:
+class vijayawada():
+    def placename(self):
+        print("vijayawada placename is KLU")
+    def student(self):
+        print("Yes-vijayawada")
+    def which_year(self):
+        print("3rd year")
+class hyd():
+    def placename(self):
+        print("hyd placename is hyd klu")
+    def student(self):
+        print("Yes-hyd")
+    def which_year(self):
+        print("3rd year")
+obj_vij=vijayawada()
+obj_hyd=hyd()
+for details in (obj_vij,obj_hyd):
+    details.placename()
+    details.student()
+    details.which_year()
+
+2:
+class parent():
+    #constructor
+    def __init__(self):
+        self.value="Inside Parent"
+
+    #parents show method
+    def show(self):
+        print(self.value)
+#defining child class
+class child(parent):
+    #consructor
+    def __init__(self):
+        self.value="Inside Parent"
+    #childs show method
+    def show(self):
+        print(self.value)
+obj1=parent()
+obj2=child()
+obj1.show()
+obj2.show()
+-------------------------------------------------------------------------------
+linked list creation
+
+#creating node-declaration & definition
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class singlelinkedlist:
+    def __init__(self):
+        self.head=None
+    def display(self):
+        if self.head is None:
+            print("linked list is empty")
+        else:
+            temp=self.head#temp=first node
+            while temp:
+                print(temp.data,"->",end=" ")
+                #temp.data means first node is data
+                temp=temp.next#establishing link
+obj=singlelinkedlist()
+#node creation-initiaising
+n=node(20)    #so n.data in node class will be 10
+obj.head=n      #assigning first node as head
+n1=node(40)
+obj.head.next=n1  #next node value
+n2=node(80)
+n1.next=n2
+obj.display()
+
+Linkedlist 2:
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class singlelinkedlist:
+    def __init__(self):
+        self.head=None
+    def display(self):
+        if self.head is None:
+            print("linked list is empty")
+        else:
+            temp=self.head#temp=first node
+            while temp:
+                print(temp.data," ",end=" ")
+                #temp.data means first node is data
+                temp=temp.next#establishing link
+obj=singlelinkedlist()
+n=node("w")    
+obj.head=n      
+n1=node("i")
+obj.head.next=n1  
+n2=node("n")
+n1.next=n2
+n3=node("n")
+n2.next=n3
+n4=node("e")
+n3.next=n4
+n5=node("r")
+n4.next=n5
+obj.display()
+----------------------------------------------------------------------------
+single linkedlist-insetion at the beginning:
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class singlelinkedlist:
+    def __init__(self):
+        self.head=None
+    def insert_beginning(self,data):
+        nb=node(data)
+        nb.next=self.head
+        self.head=nb
+    def display(self):
+        if self.head is None:
+            print("linked list is empty")
+        else:
+            temp=self.head
+            while temp:
+                print(temp.data,end=" ")
+                temp=temp.next
+obj=singlelinkedlist()
+n=node(10)
+obj.head=n
+n1=node(20)
+n.next=n1
+n2=node(30)
+n1.next=n2
+n3=node(40)
+n2.next=n3
+n4=node(50)
+n3.next=n4
+print("before inseting 100")
+obj.display()
+print(" ")
+print("after inserting 100")
+obj.insert_beginning(100)
+obj.display()
+print(" ")
+print("after inserting 555")
+obj.insert_beginning(555)
+obj.display()
+
+INSERT AT THE END:
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class singlelinkedlist:
+    def __init__(self):
+        self.head=None
+    def insert_end(self,data):
+        ne=node(data)
+        temp=self.head
+        while temp.next:
+            temp=temp.next
+        temp.next=ne
+    def display(self):
+        if self.head is None:
+            print("linked list is empty")
+        else:
+            temp=self.head
+            while temp:
+                print(temp.data,end=" ")
+                temp=temp.next
+obj=singlelinkedlist()
+n=node(10)
+obj.head=n
+n1=node(20)
+n.next=n1
+n2=node(30)
+n1.next=n2
+n3=node(40)
+n2.next=n3
+n4=node(50)
+n3.next=n4
+print("before inseting 100")
+obj.display()
+print(" ")
+print("after inserting 100")
+obj.insert_end(100)
+obj.display()
+print(" ")
+print("after inserting 555")
+obj.insert_end(555)
+obj.display()
+ 
+INSERT AT THE POSITION:
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class singlelinkedlist:
+    def __init__(self):
+        self.head=None
+    def position(self,pos,data):
+        np=node(data)
+        temp=self.head
+        for i in range(pos-1):
+            temp=temp.next
+        np.next=temp.next
+        temp.next=np
+    def display(self):
+        if self.head is None:
+            print("linked list is empty")
+        else:
+            temp=self.head
+            while temp:
+                print(temp.data,end=" ")
+                temp=temp.next 
+obj=singlelinkedlist()
+n=node(10)
+obj.head=n
+n1=node(20)
+n.next=n1
+n2=node(30)
+n1.next=n2
+n3=node(40)
+n2.next=n3
+n4=node(50)
+n3.next=n4
+print("before inseting 100")
+obj.display()
+print(" ")
+print("after inserting 100")
+obj.position(3,555)
+obj.display()
+
+------------------------------------------------------------------------------------
+ class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class linkedlist:
+    def __init__(self):
+        self.head=None
+        self.last_node=None
+    def append(self,data):
+        if self.last_node is None:
+            self.head=node(data)
+            self.last_node=self.head
+        else:
+            self.last_node.next=node(data)
+            self.last_next=self.last_node.next
+    def display(self):
+       current=self.head
+       while current is not None:
+           print(current.data,end=' ')
+           current=current.next
+a_llist=linkedlist()
+n=int(input('how many element would you like to have: '))
+for i in range(n):
+    data=int(input('enter data items: '))
+    a_llist.append(data)
+print('the link list : ',end=' ')
+a_llist.display()
