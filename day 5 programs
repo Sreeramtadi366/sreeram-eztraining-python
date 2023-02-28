@@ -6,7 +6,7 @@ sample() #calling function
 print("again")
 sample()
 
-#OUTPUT:--
+
 hello
 good day!
 again
