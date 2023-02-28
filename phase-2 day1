@@ -1,0 +1,41 @@
+lambda function  :Its called as anonymous function.When we want to use function concept alone without using function name there we apply the concept of lambda function.
+
+Four pillars of OOPS:
+
+1.Abstraction
+2.Encapsulation
+3.Interitance
+4.Polymorphism
+
+Hiding the implementation part showing what is required for the users is called as Abstraction.
+Example:exe file.
+
+We can make class or method as abstract ,oppisite to abstract is concrete.
+
+
+Encapsulation:binding data and function into a singke entity.
+
+public: one class info can be accessed by any other class.
+
+private:can be used where it is declared/no in inheritected class.
+
+protected:can be accessed only where it got declared whichever class inherited from this class there also we use.
+
+a->public
+_b->protected
+_ _c->private
+
+Interitance:base class and derived class.
+
+derived class will inherit properties of base class.
+
+Base class-parent class.
+Derived class-child class.
+
+Types of inheritance:
+
+1.Single inheritance
+2.multiple inheritance
+3.Multi level inheritance
+4.Hirerical inheritance
+5.Hybrid inheritance
