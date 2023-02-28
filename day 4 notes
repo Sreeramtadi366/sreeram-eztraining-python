@@ -7,5 +7,4 @@ MUTABLE VS IMMUTABLE:
 ~int
 ~float
 ~string
-~bool
-~tuple
+~boolean
